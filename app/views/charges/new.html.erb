@@ -1,0 +1,15 @@
+<%= form_tag charges_path(id: @product.id) do %>
+   <article>
+     <label class="amount">
+       <span>Amount: $<%= sprintf "%.2f", @product.price %></span>
+     </label>
+   </article>
+ 
+   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+     data-description="One-Time Charge For: <%= @product.name %>"
+     data-amount="<%= @product.price * 100 %>"
+     data-shipping-address="false"
+     data-billing-address="false">
+   </script>
+<% end %>
