@@ -1,11 +1,13 @@
 class ChargesController < ApplicationController
   def new
-    @product = Product.find(params[:id])
+    #@product = Product.find(params[:id])
+    @cart = Cart.find(params[:id])
   end
 
   def create
     #amount in cents
-    @product = Product.find(params[:id])
+    #@product = Product.find(params[:id])
+    @cart = Cart.find(params[:id])
 
     customer = Stripe::Customer.create(
       :email => 'example@stripe.com',
@@ -14,7 +16,7 @@ class ChargesController < ApplicationController
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
-      :amount      => @product.price * 100,
+      :amount      => @cart.total_price * 100,
       :description => 'Rails Stripe customer',
       :currency    => 'usd'
     )
