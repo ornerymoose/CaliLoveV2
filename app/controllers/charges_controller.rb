@@ -1,5 +1,5 @@
 class ChargesController < ApplicationController
-  after_filter :destroy_cart, :only => [:create]
+  #after_filter :destroy_cart, :only => [:create]
 
   def new
     @cart = Cart.find(params[:id])
@@ -29,7 +29,7 @@ class ChargesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to root_url, notice: 'Your cart is now empty, thanks for the order!' }
+      format.html { redirect_to order_path(@cart), notice: 'Your cart is now empty, thanks for the order!' }
       format.json { head :ok }
     end
 
@@ -37,10 +37,10 @@ class ChargesController < ApplicationController
 
   private
 
-  def destroy_cart
-    @cart = current_cart
-    @cart.destroy
-    session[:cart_id] = nil
-  end
+  #def destroy_cart
+    #@cart = current_cart
+    #@cart.destroy
+    #session[:cart_id] = nil
+  #end
 end
 

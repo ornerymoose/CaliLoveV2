@@ -1,4 +1,5 @@
 StripeAdmin::Application.routes.draw do
+  get "orders/index"
   resources :line_items
 
   resources :carts
@@ -8,6 +9,8 @@ StripeAdmin::Application.routes.draw do
   resources :products
   resources :charges
   root 'products#index'
+  #match 'orders/id:' => 'orders#show'
+  resources :orders
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
