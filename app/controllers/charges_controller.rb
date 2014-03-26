@@ -12,14 +12,14 @@ class ChargesController < ApplicationController
     @cart = Cart.find(params[:id])
 
     customer = Stripe::Customer.create(
-      :email => 'example@stripe.com',
+      :email => params[:stripeEmail],
       :card => params[:stripeToken]
     )
 
     charge = Stripe::Charge.create(
       :customer    => customer.id,
       :amount      => @cart.total_price * 100,
-      :description => 'Rails Stripe customer',
+      :description => 'California Love Customer',
       :currency    => 'usd'
     )  
 
@@ -29,7 +29,7 @@ class ChargesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to order_path(@cart), notice: 'Your cart is now empty, thanks for the order!' }
+      format.html { redirect_to order_path(@cart), notice: 'Your cart is now empty' }
       format.json { head :ok }
     end
 
