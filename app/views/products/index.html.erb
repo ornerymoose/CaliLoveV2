@@ -1,29 +1,33 @@
-<p id="notice"><%= notice %></p>
-<h1>Available Products for Purchase</h1>
+<div class="wrapper">
+  <p id="notice"><%= notice %></p>
+  <h1>Available Products for Purchase</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
+  <table>
+    <thead>
       <tr>
-        <td><%= product.name %></td>
-        <td><%= product.price %></td>
-        <td><%= link_to 'Show', product %></td>
-        <td><%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %></td>
+        <th>Name</th>
+        <th>Price</th>
+        <th></th>
+        <th></th>
+        <th></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<div class="product-container">
-  <div id="male-shirt"></div>
-  <div id="female-shirt"></div>
+    </thead>
+
+    <tbody>
+      <% @products.each do |product| %>
+        <tr>
+          <td><%= product.name %></td>
+          <td><%= product.price %></td>
+          <td><%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <div class="push"></div>
+</div>
+<div class="lower-screen">
+  <div class="product-container">
+    <div id="male-shirt"></div>
+    <div id="female-shirt"></div>
+  </div>
 </div>

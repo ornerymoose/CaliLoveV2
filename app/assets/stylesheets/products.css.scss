@@ -1,14 +1,22 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-body 
+html, body 
 { 
   background: url(rainbow.jpg) no-repeat; 
   background-size: cover;
+  height: 100%;
 }
 
 * {
   color: white !important;
+  margin: 0;
+}
+
+.lower-screen
+{
+  background-color: white;
+  height: 300px;
 }
 
 .product-container
@@ -16,15 +24,14 @@ body
   margin-left: auto; 
   margin-right: auto; 
   width: 800px;
-  height: 400px;
-  margin-top: 255px;
+  height: 300px;
 }
 #male-shirt, #female-shirt
 {
   background: url(shirt_male_white.jpg) no-repeat;
-  background-size:300px 400px;
-  width: 300px;
-  height: 400px;
+  background-size:250px 300px;
+  width: 250px;
+  height: 300px;
   float: left;
 }
 
@@ -32,4 +39,17 @@ body
 {
   background-image: url(shirt_female_white.jpg);
   float: right;
+}
+
+.wrapper 
+{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -300px;
+}
+
+.lower-screen, .push 
+{
+  height: 300px;
 }
