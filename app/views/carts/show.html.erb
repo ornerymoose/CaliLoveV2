@@ -1,22 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-<%#= link_to 'Edit', edit_cart_path(@cart) %> 
-<%#= link_to 'Back', carts_path %>
-
-<h2> Your current cart: </h2>
-<ul>
-  <% @cart.line_items.each do |item| %>
-    <li><%= item.quantity %> &times; <%= item.product.name %><br>
-        at $<%= item.product.price %> each</li>
-  <% end %>
-</ul>
-
-<table>
-<tr class="total_line">
-  <td>Total: </td>
-  <td><%= number_to_currency(@cart.total_price) %></td>
-</tr>
-</table>
-<%= button_to 'Empty Cart', @cart, method: :delete, confirm: 'Are you sure?' %>
+<%#= render @cart %>
 <%= link_to 'Checkout', new_charge_path(id: @cart.id) %><br>
 <%= link_to 'Products', root_url %>
