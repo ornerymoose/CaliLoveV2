@@ -29,7 +29,7 @@ class ChargesController < ApplicationController
     end
 
     respond_to do |format|
-      format.html { redirect_to order_path(@cart), notice: 'Your cart is now empty' }
+      format.html { redirect_to order_path(@cart) }
       format.json { head :ok }
     end
 
