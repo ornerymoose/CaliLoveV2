@@ -8,7 +8,8 @@ StripeAdmin::Application.routes.draw do
   ActiveAdmin.routes(self)
   resources :products
   resources :charges
-  root 'products#index'
+  #root 'products#index'
+  root 'products#welcome'
   #match 'orders/id:' => 'orders#show'
   resources :orders
 

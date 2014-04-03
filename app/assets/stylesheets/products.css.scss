@@ -6,6 +6,7 @@ html, body
   background: url(rainbow.jpg) no-repeat; 
   background-size: cover;
   height: 100%;
+  overflow-y: hidden;
 }
 
 * {
@@ -13,11 +14,6 @@ html, body
   margin: 0;
 }
 
-.lower-screen
-{
-  background-color: white;
-  height: 300px;
-}
 
 .product-container
 {
@@ -26,6 +22,7 @@ html, body
   width: 800px;
   height: 300px;
 }
+
 #male-shirt, #female-shirt
 {
   background: url(shirt_male_white.jpg) no-repeat;
@@ -46,10 +43,15 @@ html, body
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -300px;
+  margin: 0 auto -475px;
+}
+
+.lower-screen
+{
+  background-color: white;
 }
 
 .lower-screen, .push 
 {
-  height: 300px;
+  height: 475px;
 }

@@ -8,6 +8,11 @@ class ProductsController < ApplicationController
     @cart = current_cart
   end
 
+  def welcome
+    @products = Product.all
+    @cart = current_cart
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show
