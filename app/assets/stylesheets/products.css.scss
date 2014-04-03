@@ -10,10 +10,31 @@ html, body
 }
 
 * {
-  color: white !important;
   margin: 0;
 }
 
+#transparent-box
+{
+  margin-left: auto; 
+  margin-right: auto;
+  margin-top: 40px;
+  width: 800px;
+  height: 150px;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 5px;
+}
+
+.logo-red
+{
+  background-image: url('logo_red.png');
+  background-repeat: no-repeat;
+  background-size: 290px 95px;
+  height: 95px;
+  width: 290px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .product-container
 {
@@ -38,12 +59,28 @@ html, body
   float: right;
 }
 
+#true-footer
+{
+  height: 60px;
+  margin: auto; 
+  text-align: center; 
+  display:block;
+}
+
+.link-footer:hover, .link-footer:visited, .link-footer:link, .link-footer:active 
+{
+  border: 0px;
+  text-decoration: none;
+  background-color: transparent;
+  color: black;
+} 
+
 .wrapper 
 {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -475px;
+  margin: 0 auto -550px;
 }
 
 .lower-screen
@@ -53,5 +90,5 @@ html, body
 
 .lower-screen, .push 
 {
-  height: 475px;
+  height: 550px;
 }

@@ -1,33 +1,19 @@
-<h1>Available Products for Purchase</h1>
+<div id="transparent-box">
+  <div class="logo-red"></div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-    <th>Name</th>
-    <th>Price</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-      <td><%= product.name %></td>
-      <td><%= product.price %></td>
-      <td><%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 <div class="wrapper">
-
   <div class="push"></div>
-  </div>
-  <div class="lower-screen">
+</div>
+<div class="lower-screen">
   <div class="product-container">
-  <div id="male-shirt"></div>
-  <div id="female-shirt"></div>
+    <div id="male-shirt"></div>
+    <div id="female-shirt"></div>
+  </div>
+  <div id="true-footer">
+    <%= link_to 'About', '#', :class => 'link-footer' %> 
+    <%= link_to 'Shop', '#', :class => 'link-footer' %> 
+    <%= link_to 'Contact', '#', :class => 'link-footer' %> 
+    <%= link_to 'Cart', '#', :class => 'link-footer' %> 
   </div>
 </div>
