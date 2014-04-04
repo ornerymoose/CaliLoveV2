@@ -1,18 +1,7 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-html, body 
-{ 
-  background: url(rainbow.jpg) no-repeat; 
-  background-size: cover;
-  height: 100%;
-  overflow-y: hidden;
-}
-
-* {
-  margin: 0;
-}
-
+/* TOP BANNER CONTENT - BEGIN */
 #transparent-box
 {
   margin-left: auto; 
@@ -36,6 +25,16 @@ html, body
   margin-right: auto;
 }
 
+.true-footer
+{
+  height: 70px;
+  margin: auto; 
+  text-align: center; 
+  display:block;
+}
+/* TOP BANNER CONTENT - END */
+
+/* SHOWCASE CONTENT - BEGIN */
 .product-container
 {
   margin-left: auto; 
@@ -58,14 +57,8 @@ html, body
   background-image: url(shirt_female_white.jpg);
   float: right;
 }
+/* SHOWCASE CONTENT - END */
 
-#true-footer
-{
-  height: 60px;
-  margin: auto; 
-  text-align: center; 
-  display:block;
-}
 
 .link-footer:hover, .link-footer:visited, .link-footer:link, .link-footer:active 
 {
@@ -73,14 +66,64 @@ html, body
   text-decoration: none;
   background-color: transparent;
   color: black;
+  padding: 0px 60px 0px 90px;
 } 
+
+/* FOOTER LIST ITEMS - BEGIN */
+.sticky-footer
+{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  margin-top: 35px;
+}
+
+.unstyled 
+{
+  list-style: none;
+}
+
+.footer-items:link, .footer-items:active, .footer-items:visited
+{
+  text-decoration: none;
+}
+
+.footer-items:hover 
+{
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  color: black;
+  opacity: 0.8;
+  background: none;
+}
+
+.span1
+{
+  display: inline-block;
+}
+/* FOOTER LIST ITEMS - END */
+
+/* PAGE ESSENTIALS - BEGIN */
+html, body 
+{ 
+  background: url(rainbow.jpg) no-repeat; 
+  background-size: cover;
+  height: 100%;
+  overflow-y: hidden;
+}
+
+* {
+  margin: 0;
+}
 
 .wrapper 
 {
   min-height: 100%;
   height: auto !important;
   height: 100%;
-  margin: 0 auto -550px;
+  margin: 0 auto -560px;
 }
 
 .lower-screen
@@ -90,5 +133,6 @@ html, body
 
 .lower-screen, .push 
 {
-  height: 550px;
+  height: 560px;
 }
+/* PAGE ESSENTIALS - END */

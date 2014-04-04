@@ -1,5 +1,11 @@
 <div id="transparent-box">
   <div class="logo-red"></div>
+  <div class="true-footer">
+    <%= link_to 'About', '#', :class => 'link-footer' %> 
+    <%= link_to 'Shop', '#', :class => 'link-footer' %> 
+    <%= link_to 'Contact', '#', :class => 'link-footer' %> 
+    <%= link_to 'Cart', '#', :class => 'link-footer' %> 
+  </div>
 </div>
 
 <div class="wrapper">
@@ -10,10 +16,26 @@
     <div id="male-shirt"></div>
     <div id="female-shirt"></div>
   </div>
-  <div id="true-footer">
-    <%= link_to 'About', '#', :class => 'link-footer' %> 
-    <%= link_to 'Shop', '#', :class => 'link-footer' %> 
-    <%= link_to 'Contact', '#', :class => 'link-footer' %> 
-    <%= link_to 'Cart', '#', :class => 'link-footer' %> 
+  <div class="sticky-footer">
+    <div class="span1">
+      <ul class="unstyled">
+        <li><%= link_to 'About Calove', '#', :class => 'footer-items' %></li> 
+      </ul>
+    </div>
+    <div class="span1">
+      <ul class="unstyled">
+        <li><%= link_to 'Customer Service', '#', :class => 'footer-items' %></li> 
+      </ul>
+    </div>
+    <div class="span1">
+      <ul class="unstyled">
+        <li><%= link_to 'Email Alerts', '#', :class => 'footer-items' %></li> 
+      </ul>
+    </div>
+    <div class="span1">
+      <ul class="unstyled">
+        <li><%= link_to 'Contact', '#', :class => 'footer-items' %></li> 
+      </ul>
+    </div>
   </div>
 </div>
