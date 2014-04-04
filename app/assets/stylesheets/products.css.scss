@@ -1,6 +1,7 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
 /* TOP BANNER CONTENT - BEGIN */
 #transparent-box
 {
@@ -25,12 +26,29 @@
   margin-right: auto;
 }
 
-.true-footer
+.header-items
 {
   height: 70px;
-  margin: auto; 
   text-align: center; 
   display:block;
+  margin-top: 17px;
+}
+
+.banner-item:link, .banner-item:active, .banner-item:visited
+{
+  text-decoration: none;
+  margin: 0px 70px 0px 70px;
+}
+
+.banner-item:hover 
+{
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+  margin-top: -2px;
+  margin-bottom: -2px;
+  color: black;
+  opacity: 0.8;
+  background: none;
 }
 /* TOP BANNER CONTENT - END */
 
@@ -58,16 +76,6 @@
   float: right;
 }
 /* SHOWCASE CONTENT - END */
-
-
-.link-footer:hover, .link-footer:visited, .link-footer:link, .link-footer:active 
-{
-  border: 0px;
-  text-decoration: none;
-  background-color: transparent;
-  color: black;
-  padding: 0px 60px 0px 90px;
-} 
 
 /* FOOTER LIST ITEMS - BEGIN */
 .sticky-footer
