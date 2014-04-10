@@ -1,24 +1,15 @@
-<p id="notice"><%= notice %></p>
-<h1>Available Products for Purchase</h1>
+<%= render "header" %>
+<%= stylesheet_link_tag "products-index" %>
+<h2>Products</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Price</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @products.each do |product| %>
-      <tr>
-        <td><%= product.name %></td>
-        <td><%= product.price %></td>
-        <td><%= button_to 'Add to Cart', line_items_path(product_id: product), remote: true %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="products-container">
+  <% @products.each_with_index do |product, index| %>
+    <div class="product-item-<%= index %>">
+      <div class="product-details-<%= index %>">
+        <%= link_to "#{product.name}", product %>
+        <%= product.price %>
+      </div>
+      <%#= button_to 'Add to Cart', line_items_path(product_id: product), remote: true,  class: 'add-to-cart' %>
+    </div>
+  <% end %>
+</div>

@@ -1,16 +1,15 @@
 StripeAdmin::Application.routes.draw do
   get "orders/index"
-  resources :line_items
+  get "products/current"
 
+  resources :line_items
   resources :carts
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   resources :products
   resources :charges
-  #root 'products#index'
   root 'products#welcome'
-  #match 'orders/id:' => 'orders#show'
   resources :orders
 
   # The priority is based upon order of creation: first created -> highest priority.

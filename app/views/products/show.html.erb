@@ -10,4 +10,5 @@
   <%= @product.price %>
 </p>
 
-<%= link_to 'Buy this product today!', new_charge_path(id: @product.id) %>
+<%#= link_to 'Buy this product today!', new_charge_path(id: @product.id) %>
+<%= button_to 'Add to Cart', line_items_path(product_id: @product), remote: true,  class: 'add-to-cart' %>
