@@ -10,5 +10,16 @@
   <%= @product.price %>
 </p>
 
-<%#= link_to 'Buy this product today!', new_charge_path(id: @product.id) %>
 <%= button_to 'Add to Cart', line_items_path(product_id: @product), remote: true,  class: 'add-to-cart' %>
+
+<%= form_for(@product, remote: true, :authenticity_token => true) do |f| %>
+  <%= f.select :size, { "Small" => "Small", "Medium" => "Medium", "Large" => "Large"}, {:prompt => 'Select a size...'}, :onchange => 'this.form.submit();' %>
+<% end %>
+
+
+<h1>size's currently <span class="form size"><%= @product.size %></span></h1>
+<script>
+  $("form select[name=size]").on("change", function(e){
+    $("span.form.size").val($("form select[name=size]:selected").val());});
+</script>
+
