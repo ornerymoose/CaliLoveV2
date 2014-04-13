@@ -118,8 +118,8 @@ html, body
 { 
   background: url(rainbow.jpg) no-repeat; 
   background-size: cover;
+  overflow-y:hidden;
   height: 100%;
-  overflow-y: hidden;
 }
 
 * {
