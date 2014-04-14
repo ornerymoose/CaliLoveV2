@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "charges-new" %>
 <%= form_tag charges_path(id: @cart.id) do %>
    <article>
     <%= number_to_currency(@cart.total_price) %>

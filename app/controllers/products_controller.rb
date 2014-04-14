@@ -18,6 +18,7 @@ class ProductsController < ApplicationController
   def show
     @product = Product.find(params[:id])
     @cart = current_cart
+    @sizes = {'Small' => 'Small', 'Medium' => 'Medium', 'Large' => 'Large'}
   end
 
   # GET /products/new
