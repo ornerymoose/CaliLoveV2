@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "products-show" %>
 <p id="notice"><%= notice %></p>
 
 <p>
@@ -10,16 +11,11 @@
   <%= @product.price %>
 </p>
 
-<%= button_to 'Add to Cart', line_items_path(product_id: @product), remote: true,  class: 'add-to-cart' %>
+<%#= button_to 'Add to Cart', line_items_path(product_id: @product), remote: true,  class: 'add-to-cart' %>
 
-<%= form_for(@product, remote: true, :authenticity_token => true) do |f| %>
-  <%= f.select :size, { "Small" => "Small", "Medium" => "Medium", "Large" => "Large"}, {:prompt => 'Select a size...'}, :onchange => 'this.form.submit();' %>
+
+<%= form_for(@product, url: line_items_path(product_id: @product.id), html: {method: "create"}, remote: true) do |f| %>
+  <%= f.select :size, { "Small" => "Small", "Large" => "Large"}, {:prompt => 'Select a size...'} %>
+  <%= f.submit "Add to Cart" %>
 <% end %>
-
-
-<h1>size's currently <span class="form size"><%= @product.size %></span></h1>
-<script>
-  $("form select[name=size]").on("change", function(e){
-    $("span.form.size").val($("form select[name=size]:selected").val());});
-</script>
 
