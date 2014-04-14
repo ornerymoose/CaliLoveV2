@@ -1,8 +1,8 @@
 class Cart < ActiveRecord::Base
   has_many :line_items, dependent: :destroy
   
-  def add_product(product_id)
-      current_item = line_items.build(product_id: product_id)
+  def add_product(product_id, size)
+      current_item = line_items.build(product_id: product_id, size: size)
   end
 
   def total_price

@@ -15,7 +15,7 @@
 
 
 <%= form_for(@product, url: line_items_path(product_id: @product.id), html: {method: "create"}, remote: true) do |f| %>
-  <%= f.select :size, { "Small" => "Small", "Large" => "Large"}, {:prompt => 'Select a size...'} %>
+  <%= f.select :size, { "Small" => "Small", "Medium" => "Medium", "Large" => "Large"}, {:prompt => 'Select a size...'} %>
   <%= f.submit "Add to Cart" %>
 <% end %>
 
