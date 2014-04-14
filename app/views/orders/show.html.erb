@@ -5,7 +5,7 @@ Your order was a success!
 <p> Here's what you bought from California Love:</p>
  <ul>
   <% @cart.line_items.each do |item| %>
-    <li><%= item.quantity %> &times; <%= item.product.size %> <%= item.product.name %><br>
+    <li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br>
     at $<%= item.product.price %> each</li>
   <% end %>
 </ul>

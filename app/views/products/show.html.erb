@@ -15,8 +15,9 @@
 
 
 <%= form_for(@product, url: line_items_path(product_id: @product.id), html: {method: "update"}, remote: true) do |f| %>
-  <%#= f.select :size, { "Small" => "Small", "Large" => "Large"}, {:prompt => 'Select a size...'} %>
-  <%= f.select(:size, @sizes.map {|value| value}) %>
+  <%= f.select :size, { "Small" => "Small", "Medium" => "Medium", "Large" => "Large"}, {:prompt => 'Select a size...'} %>
+  <%= f.select :color, { "White" => "White", "Black" => "Black"}, {:prompt => 'Select a color...'} %>
+  <%#= f.select(:size, @sizes.map {|value| value}) %>
   <%= f.submit "Add to Cart" %>
 <% end %>
 

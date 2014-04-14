@@ -3,6 +3,8 @@ class OrdersController < ApplicationController
 
   def show 
     @cart = current_cart
+    #size = params[:product][:size]
+    #color = params[:product][:color]
   end
 
   private
