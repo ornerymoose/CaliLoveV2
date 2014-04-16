@@ -9,7 +9,6 @@ class ProductsController < ApplicationController
   end
 
   def welcome
-    @products = Product.all
     @cart = current_cart
   end
 

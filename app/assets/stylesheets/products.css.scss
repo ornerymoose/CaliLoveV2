@@ -20,6 +20,11 @@
   background-image: url('logo_red.png');
   background-repeat: no-repeat;
   background-size: 290px 95px;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+
   height: 95px;
   width: 290px;
   margin-left: auto;
@@ -31,13 +36,18 @@
   height: 70px;
   text-align: center; 
   display:block;
-  margin-top: 17px;
+  position: fixed;
+  top: 158px;
+  left: 0;
+  right: 0;
 }
 
 .banner-item:link, .banner-item:active, .banner-item:visited
 {
   text-decoration: none;
   margin: 0px 70px 0px 70px;
+  font-size: 16px;
+  color: black;
 }
 
 .banner-item:hover 
@@ -94,6 +104,8 @@
 .footer-items:link, .footer-items:active, .footer-items:visited
 {
   text-decoration: none;
+  color: black;
+  font-size: 16px;
 }
 
 .footer-items:hover 
