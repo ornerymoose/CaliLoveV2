@@ -50,7 +50,7 @@
   right: 0;
 }
 
-.banner-item:link, .banner-item:active, .banner-item:visited
+.header-item:link, .header-item:active, .header-item:visited
 {
   text-decoration: none;
   margin: 0px 70px 0px 70px;
@@ -60,11 +60,11 @@
   color: black;
 }
 
-.banner-item:hover 
+.header-item:hover 
 {
   border-top: 2px solid red;
   border-bottom: 2px solid red;
-  padding-top: 2px;
+  padding-top: 4px;
   color: black;
   opacity: 0.8;
   background: none;
@@ -122,7 +122,7 @@
 {
   text-align: center;
   height: 45px;
-  width: 100%;
+  /*width: 100%;*/
 }
 
 .footer
@@ -130,21 +130,9 @@
   background-color: white;
 }
 
-.unstyled li
-{
-  list-style: none;
-  padding: 0px 45px 0px 45px;
-  display: inline;
-}
-
-.unstyled
-{
-  margin-top: 15px;
-}
-
 .footer-items 
 {
-  padding: 0px 45px 0px 45px;
+  margin: 0px 45px 0px 45px;
 }
 
 .inner-footer
