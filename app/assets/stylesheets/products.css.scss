@@ -20,11 +20,10 @@
   background-image: url('logo_red.png');
   background-repeat: no-repeat;
   background-size: 290px 95px;
-  position: fixed;
+  position: absolute;
   top: 50px;
   left: 0;
   right: 0;
-
   height: 95px;
   width: 290px;
   margin-left: auto;
@@ -36,7 +35,7 @@
   height: 70px;
   text-align: center; 
   display:block;
-  position: fixed;
+  position: absolute;
   top: 158px;
   left: 0;
   right: 0;
@@ -46,7 +45,8 @@
 {
   text-decoration: none;
   margin: 0px 70px 0px 70px;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: "Myriad Hebrew";
   color: black;
 }
 
@@ -54,8 +54,7 @@
 {
   border-top: 2px solid red;
   border-bottom: 2px solid red;
-  margin-top: -2px;
-  margin-bottom: -2px;
+  padding-top: 2px;
   color: black;
   opacity: 0.8;
   background: none;
@@ -63,6 +62,27 @@
 /* TOP BANNER CONTENT - END */
 
 /* SHOWCASE CONTENT - BEGIN */
+
+.about-shop
+{
+  background-color: white;
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 100%;
+  height: 75px;
+  text-align: center;
+  line-height: 75px;
+  font-family: "Myriad Hebrew";
+  font-size: 20px;
+}
+
+.filler-container
+{
+  background-color: white;
+  width: 100%;
+  height: 300px;
+}
+
 .product-container
 {
   margin-left: auto; 
@@ -88,32 +108,37 @@
 /* SHOWCASE CONTENT - END */
 
 /* FOOTER LIST ITEMS - BEGIN */
-.sticky-footer
+.footer, .push
 {
-  margin-left: auto;
-  margin-right: auto;
   text-align: center;
-  margin-top: 35px;
+  height: 45px;
 }
 
-.unstyled 
+.unstyled li
 {
   list-style: none;
+  padding: 0px 45px 0px 45px;
+  display: inline;
+}
+
+.unstyled
+{
+  margin-top: 15px;
 }
 
 .footer-items:link, .footer-items:active, .footer-items:visited
 {
   text-decoration: none;
   color: black;
-  font-size: 16px;
+  font-size: 20px;
+  font-family: "Myriad Hebrew";
 }
 
 .footer-items:hover 
 {
   border-top: 2px solid red;
   border-bottom: 2px solid red;
-  margin-top: -2px;
-  margin-bottom: -2px;
+  padding-top: 3px;
   color: black;
   opacity: 0.8;
   background: none;
@@ -130,7 +155,6 @@ html, body
 { 
   background: url(rainbow.jpg) no-repeat; 
   background-size: cover;
-  overflow-y:hidden;
   height: 100%;
 }
 
@@ -140,19 +164,9 @@ html, body
 
 .wrapper 
 {
-  min-height: 100%;
+  min-height: 92%;
   height: auto !important;
-  height: 100%;
-  margin: 0 auto -560px;
-}
-
-.lower-screen
-{
-  background-color: white;
-}
-
-.lower-screen, .push 
-{
-  height: 560px;
+  height: 92%;
+  margin: 0 auto -45px;
 }
 /* PAGE ESSENTIALS - END */

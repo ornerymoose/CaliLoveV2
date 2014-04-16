@@ -1,41 +1,17 @@
-<div id="transparent-box">
-  <div class="logo-red"></div>
-  <div class="header-items">
-    <%= link_to 'About', '#', :class => 'banner-item' %> 
-    <%= link_to 'Shop', '/products', :class => 'banner-item' %> 
-    <%= link_to 'Contact', '#', :class => 'banner-item' %> 
-    <%= link_to 'Cart', '/products/current', :class => 'banner-item' %> 
-  </div>
-</div>
-
-<div class="wrapper">
-  <div class="push"></div>
-</div>
-<div class="lower-screen">
-  <div class="product-container">
-    <div id="male-shirt"></div>
-    <div id="female-shirt"></div>
-  </div>
-  <div class="sticky-footer">
-    <div class="span1">
-      <ul class="unstyled">
-        <li><%= link_to 'About Calove', '#', :class => 'footer-items' %></li> 
-      </ul>
+<html>
+  <body>
+    <div class="wrapper">
+      <%= render "header" %>
+     <div class="push"></div>
     </div>
-    <div class="span1">
-      <ul class="unstyled">
-        <li><%= link_to 'Customer Service', '#', :class => 'footer-items' %></li> 
-      </ul>
-    </div>
-    <div class="span1">
-      <ul class="unstyled">
-        <li><%= link_to 'Subscribe', '#', :class => 'footer-items' %></li> 
-      </ul>
-    </div>
-    <div class="span1">
-      <ul class="unstyled">
-        <li><%= link_to 'Contact', '#', :class => 'footer-items' %></li> 
-      </ul>
-    </div>
-  </div>
-</div>
+      <div class="empty-container"></div>
+      <div class="about-shop">All Products are Designed and Printed Locally.</div>
+      <div class="filler-container">
+      <div class="product-container">
+        <div id="male-shirt"></div>
+        <div id="female-shirt"></div>
+      </div>
+     
+    <%= render "footer" %>
+  </body>
+</html>
