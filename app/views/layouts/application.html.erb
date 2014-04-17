@@ -7,11 +7,11 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div id="cart">
+  <!-- <div id="cart">
     <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
       <%= render @cart %>
     <% end %>
-  </div>
+  </div> -->
 
 <%= yield %>
 

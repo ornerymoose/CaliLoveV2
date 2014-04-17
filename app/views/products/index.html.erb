@@ -1,26 +1,23 @@
 <html>
 	<head>
 		<%= stylesheet_link_tag "products-index" %>
-  </head>
-  <body>
-  	<div class="wrapper-index">
-      <%= render "header" %>
-      <div class="push-index"></div>
-      <div class="products-container">
-	  		<% @products.each_with_index do |product, index| %>
-	    		<div class="product-item-<%= index %>">
-	      	<div class="product-details-<%= index %>">
-	      	<%= link_to "#{product.name}", product %>
-	      	<%= product.price %>
-	      	</div>
-	    		</div>
-	  		<% end %>
-	 		</div>
-      
-    </div>
-      
-	
+	</head>
+	<body>
+	<div class="wrapper-index">
+		<%= render "header" %>
+		<div class="push-index"></div>
+		<div class="products-container">
+			<% @products.each_with_index do |product, index| %>
+				<div class="product-item-<%= index %>">
+				<div class="product-details-<%= index %>">
+				<%= link_to "#{product.name}", product %>
+				<%= product.price %>
+				</div>
+				</div>
+			<% end %>
+		</div>
+	</div>
 	<%= render "footer" %>
-  </body>
+	</body>
 </html>
 

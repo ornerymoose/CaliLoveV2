@@ -38,6 +38,48 @@
   margin-right: auto;
 }
 
+.search-input-header {  
+  /*position: fixed;
+  left: 310px;
+  top: 70px;*/
+  margin-left: 40px;
+  margin-top: 30px;
+  width: 150px !important;
+  color: #9fa8b0;
+  font-size: 12px;
+  line-height: 20px;
+  border-radius: 20px !important;
+  -moz-border-radius: 20px !important;
+  -webkit-border-radius: 20px !important;
+  /*background: #20282D;*/ /* old browsers */
+  background: #E4E4E4;
+  
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#20282D', endColorstr='#222A30',GradientType=0 ); 
+  -moz-box-shadow: 1px 1px 1px rgba(255,255,255,0.1); 
+  -webkit-box-shadow: 1px 1px 1px rgba(255,255,255,0.1); 
+  box-shadow: 1px 1px 1px rgba(255,255,255,0.1); 
+}
+
+.cart-total-partial
+{
+  width: 65px;
+  height: 15px;
+  margin-left: 660px;
+  margin-top: -20px;
+}
+
+/*.cart-total
+{
+ 
+  width: 55px;
+  height: 20px;
+  position: absolute;
+  right: 359px;
+  top: 85px;
+  font-family: "Myriad Hebrew";
+  font-size: 18px;
+}*/
+
 .header-items
 {
   height: 70px;
