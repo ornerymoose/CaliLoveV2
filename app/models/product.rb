@@ -3,6 +3,9 @@ class Product < ActiveRecord::Base
 
   before_destroy :ensure_not_referenced_by_any_line_item
 
+  has_attached_file :avatar
+  validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
+
   private
 
     def ensure_not_referenced_by_any_line_item
