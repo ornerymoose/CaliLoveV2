@@ -1,0 +1,19 @@
+html, body
+{
+	background-color: blue;
+	background: none;
+}
+
+.wrapper-show
+{
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -45px;
+}
+
+.footer, .push-show
+{
+  text-align: center;
+  height: 45px;
+}
