@@ -103,9 +103,9 @@
   height: 300px;
 }
 
-#male-shirt, #female-shirt
+#male-shirt
 {
-  background: url(shirt_male_white.jpg) no-repeat;
+  background: url(Mens_BlackFront.jpg) no-repeat;
   background-size:250px 300px;
   width: 250px;
   height: 300px;
@@ -114,7 +114,10 @@
 
 #female-shirt
 {
-  background-image: url(shirt_female_white.jpg);
+  background: url(Girls_BlackFront.jpg) no-repeat;
+  background-size:250px 300px;
+  width: 250px;
+  height: 300px;
   float: right;
 }
 /* SHOWCASE CONTENT - END */
