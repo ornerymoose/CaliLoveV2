@@ -46,8 +46,9 @@
   display:block;
   position: absolute;
   top: 158px;
-  left: 0;
-  right: 0;
+  width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .header-item:link, .header-item:active, .header-item:visited
