@@ -1,11 +1,6 @@
-<%= stylesheet_link_tag "orders-show" %>
 <h1>Your Order</h1>
 <%= @customer_id.email %>
-<%= @customer_id.email %>
-<%= @customer_id.email %>
-<%= @customer_id.email %>
-Your order was a success!
-<br>
+
 <p> Here's what you bought from California Love:</p>
  <ul>
   <% @cart.line_items.each do |item| %>
