@@ -1,6 +1,6 @@
 class CustomerMailer < ActionMailer::Base
   default from: "calove.help@gmail.com"
-
+  @cart = current_cart
   def registration_confirmation(user)
     @customer = user
     #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
