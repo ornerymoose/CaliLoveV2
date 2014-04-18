@@ -4,11 +4,12 @@ class CustomerMailer < ActionMailer::Base
   #def registration_confirmation(user)
   def received(order)
   	@cart = order
+  	@customer = cust
     #@customer = user
     #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
     #mail to: "dpardy87@gmail.com"
     #mail(:to => "#{user}", :subject => "Your California Love Order")
-    mail to: order.email
+    mail to: cust.email
   end
 
   # def email_sent(user)
