@@ -1,5 +1,5 @@
 class ChargesController < ApplicationController
-  #after_filter :destroy_cart, :only => [:show]
+  after_filter :destroy_cart, :only => [:show]
 
   def new
     @cart = Cart.find(params[:id])
@@ -34,7 +34,6 @@ class ChargesController < ApplicationController
     end
 
     respond_to do |format|
-      #CustomerMailer.registration_confirmation(@customer.email).deliver
       CustomerMailer.received(@cart, @customer.email).deliver
       format.html { redirect_to charge_path(@cart, {customer_id: @customer.id}) }
       format.json { head :ok }
