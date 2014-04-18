@@ -6,7 +6,7 @@ class CustomerMailer < ActionMailer::Base
   	@cart = order
     #@customer = user
     #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
-    mail to: "#{@customer.email}"
+    mail to: "#{@customer}"
     #mail(:to => "#{user}", :subject => "Your California Love Order")
   end
 
