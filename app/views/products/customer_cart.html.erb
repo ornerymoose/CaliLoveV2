@@ -14,8 +14,8 @@
 				    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
 				  </tr>
 				</table>
-				<%= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?' %>
-				<%= link_to 'Checkout', new_charge_path(id: @cart.id) %>
+				<%= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?', :class => 'empty-cart' %>
+				<%= link_to 'Checkout', new_charge_path(id: @cart.id), {:class => "checkout"} %>
 	 		</div>
     </div>
 	<%= render "footer" %>
