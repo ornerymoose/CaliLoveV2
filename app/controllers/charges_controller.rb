@@ -36,6 +36,7 @@ class ChargesController < ApplicationController
     respond_to do |format|
       #CustomerMailer.registration_confirmation(@customer.email).deliver
       CustomerMailer.received(@cart).deliver
+      CustomerMailer.received(@customer.email).deliver
       format.html { redirect_to charge_path(@cart, {customer_id: @customer.id}) }
       format.json { head :ok }
     end

@@ -1,3 +1,4 @@
+<h3>Here are the items you bought:</h3>
 <ul>
 	<% @cart.line_items.each do |item| %>
 	<li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br>
