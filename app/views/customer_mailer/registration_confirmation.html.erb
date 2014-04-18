@@ -10,6 +10,11 @@ Dear <%= @customer %>,
 You have successfully bought some awesome California Love gear!
 <p>
 <p> Here's what you bought from California Love:</p>
+<% @cart.line_items.each do |item| %>
+		    <li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br>
+		    at $<%= item.product.price %> each</li>
+		  <% end %>
+		</ul> 
 </p>
 <p>Have a great day!</p>
 </body>
