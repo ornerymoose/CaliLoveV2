@@ -8,6 +8,7 @@ class CustomerMailer < ActionMailer::Base
     #attachments["rails.png"] = File.read("#{Rails.root}/public/images/rails.png")
     #mail to: "dpardy87@gmail.com"
     #mail(:to => "#{user}", :subject => "Your California Love Order")
+    mail to: order.email
   end
 
   # def email_sent(user)
