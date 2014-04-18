@@ -6,10 +6,6 @@
 
 # Ignore bundler config.
 /.bundle
-/config/initializers/stripe.rb
-/config/initializers/setup_mail.rb
-/config/environments/production.rb
-/config/environments/development.rb
 
 # Ignore the default SQLite database.
 /db/*.sqlite3
