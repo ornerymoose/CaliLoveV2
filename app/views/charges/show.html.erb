@@ -1,10 +1,23 @@
-<h1>Your Order</h1>
-<%= @customer_id.email %>
-
-<p> Here's what you bought from California Love:</p>
- <ul>
-  <% @cart.line_items.each do |item| %>
-    <li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br>
-    at $<%= item.product.price %> each</li>
-  <% end %>
-</ul>
+<html>
+  <head>
+    <%= stylesheet_link_tag "charges-show" %>
+  </head>
+  <body>
+    <div class="wrapper-show">
+      <%= render "header" %>
+      <div class="push-show"></div>
+      <div class="charges-show-container">
+        <h1>Your Order</h1>
+		<%= @customer_id.email %>
+		<p> Here's what you bought from California Love:</p>
+		 <ul>
+		  <% @cart.line_items.each do |item| %>
+		    <li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br>
+		    at $<%= item.product.price %> each</li>
+		  <% end %>
+		</ul>      
+      </div>
+    </div>
+    <%= render "footer" %>
+  </body>
+</html>
