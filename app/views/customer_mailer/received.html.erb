@@ -1,0 +1,6 @@
+<ul>
+	<% @cart.line_items.each do |item| %>
+	<li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br>
+	at $<%= item.product.price %> each</li>
+	<% end %>
+</ul>  
