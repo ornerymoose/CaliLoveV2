@@ -1,14 +1,28 @@
-<%= stylesheet_link_tag "charges-new" %>
-<%= form_tag charges_path(id: @cart.id) do %>
-   <article>
-    <%= number_to_currency(@cart.total_price) %>
-   </article>
- 
-   <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-     data-description="One-Time Charge For"
-     data-amount="<%= @cart.total_price * 100 %>"
-     data-shipping-address="false"
-     data-billing-address="false">
-   </script>
-<% end %>
+<html>
+  <head>
+    <%= stylesheet_link_tag "charges-new" %>
+  </head>
+  <body>
+    <div class="wrapper-show">
+      <%= render "header" %>
+      <div class="push-show"></div>
+      <div class="charges-container">
+        <%= form_tag charges_path(id: @cart.id) do %>
+          <article id="charge-total">
+            <%= number_to_currency(@cart.total_price) %>
+            <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="One-Time Charge For"
+              data-amount="<%= @cart.total_price * 100 %>"
+              data-shipping-address="false"
+              data-billing-address="false">
+            </script>
+          </article>
+
+          
+        <% end %>
+      </div>
+    </div>
+    <%= render "footer" %>
+  </body>
+</html>
