@@ -6,24 +6,22 @@
   	<div class="wrapper-show">
       <%= render "header" %>
       <div class="push-show"></div>
-      	<p>
-  			<strong>Name:</strong>
-  			<%= @product.name %>
-				</p>
-				<p>
-  			<strong>Price:</strong>
-  			<%= @product.price %>
-				</p>
-				<p>
-  			<strong>Picture:</strong>
-        <%= image_tag @product.avatar.url, :size => "100x100" %>
-				</p>
-				<%= form_for(@product, url: line_items_path(product_id: @product.id), html: {method: "update"}, remote: true) do |f| %>
-				  <%= f.select :size, { "Small" => "Small", "Medium" => "Medium", "Large" => "Large"}, {:prompt => 'Select a size...'} %>
-				  <%= f.select :color, { "White" => "White", "Black" => "Black"}, {:prompt => 'Select a color...'} %>
-				  <%= f.submit "Add to Cart" %>
-				<% end %>
-    </div>
-	<%= render "footer" %>
+        <div class="item-image">
+          <%= image_tag @product.avatar.url, :size => "550x400" %>
+          <%#= image_tag 'https://s3.amazonaws.com/californialove/twill_hat.jpg', :size => "550x450" %>
+        </div>
+          <div class="item-information">
+            <strong>Name:</strong>
+            <%= @product.name %>
+            <strong>Price:</strong>
+            <%= @product.price %>
+            <%= form_for(@product, url: line_items_path(product_id: @product.id), html: {method: "update"}, remote: true) do |f| %>
+              <%= f.select :size, { "Small" => "Small", "Medium" => "Medium", "Large" => "Large"}, {:prompt => 'Select a size...'} %>
+              <%= f.select :color, { "White" => "White", "Black" => "Black"}, {:prompt => 'Select a color...'} %>
+              <%= f.submit "Add to Cart" %>
+            <% end %>
+          </div>
+      </div>
+    <%= render "footer" %>
   </body>
 </html>
