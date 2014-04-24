@@ -38,6 +38,14 @@
   margin-right: auto;
 }
 
+::-webkit-input-placeholder {
+   color: #9fa8b0;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #9fa8b0;
+}
+
 .search-input-header {  
   /*position: fixed;
   left: 310px;
@@ -45,7 +53,7 @@
   margin-left: 40px;
   margin-top: 30px;
   width: 150px !important;
-  color: #9fa8b0;
+  color: black;
   font-size: 12px;
   line-height: 20px;
   border-radius: 20px !important;
