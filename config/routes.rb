@@ -2,6 +2,10 @@ StripeAdmin::Application.routes.draw do
   get "orders/index"
   get "products/current"
   get "products/customer_cart"
+  get "pages/about"
+  get "pages/contact"
+  get "pages/customer_service"
+  get "pages/subscribe"
 
   resources :line_items
   resources :carts
