@@ -7,15 +7,19 @@
       <%= render "header" %>
       <div class="push-customer-cart"></div>
       <div class="customer-cart-container">
-		   	<div class="cart_title">Your Cart</div> 
+		   	<div class="cart_title">Shopping Cart</div> 
 				<table>
 					<%= render(@cart.line_items) %>
 				  <tr class="total_line">
-				    <td class="total_cell"><%= number_to_currency(@cart.total_price) %></td>
+				    <td class="total_cell"><%= render @cart %></td>
 				  </tr>
 				</table>
-				<%= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?', :class => 'empty-cart' %>
-				<%= link_to 'Checkout', new_charge_path(id: @cart.id), {:class => "checkout"} %>
+				<%#= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?', :class => 'empty-cart' %>
+				<% if number_to_currency(@cart.total_price) == "$0.00" %>
+					<div class="empty-cart">You currently have nothing in your cart</div>
+				<% else %>
+					<%= link_to 'Checkout', new_charge_path(id: @cart.id), {:class => "checkout"} %>
+				<% end %>
 	 		</div>
     </div>
 	<%= render "footer" %>

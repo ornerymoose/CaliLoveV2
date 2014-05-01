@@ -1,11 +1,14 @@
-<% if line_item == @current_item %>
-<tr id="current_item">
-<% else %>
-<tr>
-<% end %>
-  <td><%= line_item.quantity %> &times;</td> 
-  <td><%= line_item.size %></td>
-  <td><%= line_item.color %></td>
-  <td><%= line_item.product.name %></td>
-  <td>at $<%= line_item.product.price %> each</td>
-</tr>
+
+	<% if line_item == @current_item %>
+	<tr id="current_item">
+	<% else %>
+	<tr class="my-current">
+	<% end %>
+	  <td><%= line_item.quantity %> &times;</td> 
+	  <td><%= line_item.size %></td>
+	  <td><%= line_item.color %></td>
+	  <td><%= line_item.product.name %></td>
+	  <td>at $<%= line_item.product.price %> each <td><%= link_to 'Remove', line_item, method: :delete, remote: true, :class => 'delete-item' %> </td></td>
+	</tr>
+
+

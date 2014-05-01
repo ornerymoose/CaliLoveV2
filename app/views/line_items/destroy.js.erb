@@ -1,0 +1,8 @@
+$('.cart-total-partial, .total_cell').html("<%=j render @cart %>");
+$('.delete-item').bind('ajax:success', function() {  
+	$(this).closest('tr').fadeOut("slow");
+}); 
+
+if ($('.my-current tr').length == 0) { 
+	$('.checkout').hide();
+}

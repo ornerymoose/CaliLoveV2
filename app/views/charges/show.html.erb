@@ -8,14 +8,16 @@
       <div class="push-show"></div>
       <div class="charges-show-container">
         <h1>Your Order</h1>
-		<%= @customer_id.email %>
-		<p> Here's what you bought from California Love:</p>
+		Dear <%= @customer_id.email %>,
+		<p> Congratulations on your purchase! Here's what you just bought from California Love:</p>
 		 <ul>
 		  <% @cart.line_items.each do |item| %>
-		    <li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br>
+		  <!--   <li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br> -->
+          <li><%= item.quantity %> &times; <%= item.size %> <%= item.color %> <%= item.product.name %><br>
 		    at $<%= item.product.price %> each</li>
 		  <% end %>
-		</ul>      
+		</ul> 
+    <p>Please check your email inbox for order confirmation!</p>     
       </div>
     </div>
     <%= render "footer" %>

@@ -1,4 +1,5 @@
 <p id="notice"><%= notice %></p>
 <%#= render @cart %>
+	
 <%= link_to 'Checkout', new_charge_path(id: @cart.id) %><br>
 <%= link_to 'Products', root_url %>
