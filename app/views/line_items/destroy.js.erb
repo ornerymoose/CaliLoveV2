@@ -1,8 +1,9 @@
 $('.cart-total-partial, .total_cell').html("<%=j render @cart %>");
 $('.delete-item').bind('ajax:success', function() {  
-	$(this).closest('tr').fadeOut("slow");
-}); 
-
-if ($('#checkout-table tr').length == 0) { 
-	$('.checkout').hide();
-}
+	$(this).closest('tr').fadeOut("slow", function(){
+  	$(this).closest('tr').remove();
+    	if ($('#checkout-table tr').length == 0) { 
+				$('.checkout').hide();
+			}
+ 	});
+});
