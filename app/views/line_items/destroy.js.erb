@@ -3,7 +3,9 @@ $('.delete-item').bind('ajax:success', function() {
 	$(this).closest('tr').fadeOut("slow", function(){
   	$(this).closest('tr').remove();
     	if ($('#checkout-table tr').length == 1) { 
-				$('.checkout').hide();
+				$('.checkout').fadeOut("slow", function(){
+					
+				});
 			}
  	});
 });

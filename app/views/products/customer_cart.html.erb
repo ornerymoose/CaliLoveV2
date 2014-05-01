@@ -16,7 +16,6 @@
 				</table>
 				<%#= button_to 'Empty cart', @cart, method: :delete, confirm: 'Are you sure?', :class => 'empty-cart' %>
 				<% if number_to_currency(@cart.total_price) == "$0.00" %>
-					<div class="empty-cart">You currently have nothing in your cart</div>
 				<% else %>
 					<%= link_to 'Checkout', new_charge_path(id: @cart.id), {:class => "checkout"} %>
 				<% end %>
