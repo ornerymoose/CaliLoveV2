@@ -28,29 +28,33 @@ html, body
   text-align: center;
 }*/
 
-.product-item-0
+.product-item-0, .product-item-1, .product-item-2, .product-item-3
 {
   background-image:url('Girls_BlackFront.jpg');
   height: 600px;
   width: 630px;
   display:inline-block;
   text-align: center;
+  background-size:600px 630px;
 }
 
 .product-item-1
 {
   float: right;
+  background-image:url('twill_hat.jpg');
 }
 
 .product-item-2
 {
   margin-top: 20px;
+  background-image:url('Mens_BlackFront.jpg');
 }
 
 .product-item-3
 {
   margin-top: 20px;
   float: right;
+  background-image:url('trucker_hat.jpg');
 }
 
 .products-container
