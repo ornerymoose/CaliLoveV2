@@ -19,9 +19,18 @@ html, body
   height: 45px;
 }
 
-.product-item-0, .product-item-1, .product-item-2, .product-item-3
+/*.product-item-0, .product-item-1, .product-item-2, .product-item-3
 {
   background-color: black;
+  height: 600px;
+  width: 630px;
+  display:inline-block;
+  text-align: center;
+}*/
+
+.product-item-0
+{
+  background-image:url('Girls_BlackFront.jpg');
   height: 600px;
   width: 630px;
   display:inline-block;
