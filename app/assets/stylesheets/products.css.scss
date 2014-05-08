@@ -4,8 +4,8 @@
 
 /* custom fonts begin */
 @font-face {
-  font-family: 'MyriadPro-Bold';
-  src:url('MyriadPro-Bold.otf');
+  font-family: 'MyriadPro-Regular';
+  src:font-url('MyriadPro-Regular.otf');
   font-weight: normal;
   font-style: normal;
 }
@@ -75,7 +75,7 @@
   margin-left: 660px;
   margin-top: -20px;
   font-size: 18px;
-  font-family: "Myriad Hebrew";
+  font-family: "MyriadPro-Regular";
 }
 
 /*.cart-total
@@ -107,7 +107,7 @@
   text-decoration: none;
   margin: 0px 65px 0px 65px;
   font-size: 18px;
-  font-family: "Myriad Hebrew";
+  font-family: "MyriadPro-Regular";
   /* font-family: "MyriadPro-Bold"; */
   color: black;
 }
@@ -135,7 +135,7 @@
   color: #696969;
   text-align: center;
   line-height: 75px;
-  font-family: "Myriad Hebrew";
+  font-family: "MyriadPro-Regular";
   font-size: 18px;
 }
 
@@ -161,6 +161,13 @@
   width: 250px;
   height: 300px;
   float: left;
+  /*&:hover {
+    background-color: red;
+  }*/
+}
+
+#male-shirt:hover{
+    background-color: red;
 }
 
 #female-shirt
@@ -202,7 +209,7 @@
   text-decoration: none;
   color: black;
   font-size: 18px;
-  font-family: "Myriad Hebrew";
+  font-family: "MyriadPro-Regular";
 }
 
 .footer-items:hover 
