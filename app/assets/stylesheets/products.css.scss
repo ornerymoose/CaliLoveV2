@@ -220,7 +220,7 @@
   font-size: 20px;
 }
 
-.welcome-item-0, .welcome-item-1
+.welcome-item-2, .welcome-item-0
 {
   background-image:url('Mens_BlackFront.jpg');
   height: 300px;
@@ -230,13 +230,13 @@
   float: left;
 }
 
-.welcome-item-1
+.welcome-item-0
 {
   background-image:url('Girls_BlackFront.jpg'); 
   float: right;
 }
 
-.welcome-item-0:hover .welcome-element, .welcome-item-1:hover .welcome-element
+.welcome-item-2:hover .welcome-element, .welcome-item-0:hover .welcome-element
 {
   color: black;
   overflow: hidden;
