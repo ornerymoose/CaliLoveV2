@@ -8,7 +8,7 @@
 	  <td><%= line_item.size %></td>
 	  <td><%= line_item.color %></td>
 	  <td><%= line_item.product.name %></td>
-	  <td>at $<%= line_item.product.price %> each <td><%= link_to 'Remove', line_item, method: :delete, remote: true, :class => 'delete-item' %> </td></td>
+	  <td>$<%= line_item.total_price %><td><%= link_to 'Remove', line_item, method: :delete, remote: true, :class => 'delete-item' %> </td></td>
 	</tr>
 
 
