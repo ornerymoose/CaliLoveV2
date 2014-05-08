@@ -14,7 +14,7 @@
             <strong>Name:</strong>
             <%= @product.name %>
             <strong>Price:</strong>
-            <%= @product.price %>
+            $<%= @product.price %> each
             <%#= form_for(@product, url: line_items_path(product_id: @product.id), html: {method: "update"}, remote: true) do |f| %>
             <%= form_for(@product, url: line_items_path(product_id: @product.id), html: {method: "update"}) do |f| %>
               <%= f.select :size, { "Small" => "Small", "Medium" => "Medium", "Large" => "Large"} %>
