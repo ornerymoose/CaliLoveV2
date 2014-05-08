@@ -4,7 +4,6 @@
   </head>
   <body>
     <div class="wrapper-show">
-      <%= render "header" %>
       <div class="push-show"></div>
       <div class="charges-container">
         <%= form_tag charges_path(id: @cart.id) do %>
@@ -18,11 +17,8 @@
               data-billing-address="false">
             </script>
           </article>
-
-          
         <% end %>
       </div>
     </div>
-    <%= render "footer" %>
   </body>
 </html>

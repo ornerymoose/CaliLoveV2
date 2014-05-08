@@ -4,7 +4,6 @@
 	</head>
 	<body>
 	<div class="wrapper-index">
-		<%= render "header" %>
 		<div class="push-index"></div>
 		<div class="products-container">
 			<% @products.each_with_index do |product, index| %>
@@ -12,12 +11,15 @@
 				<div class="product-details-<%= index %>">
 				<%= link_to "#{product.name}", product %>
 				<%= number_to_currency(product.price) %>
+	
+  			<%#= image_tag("product-item-<%= index %>
+
 				</div>
 				</div>
 			<% end %>
+			
 		</div>
 	</div>
-	<%= render "footer" %>
 	</body>
 </html>
 
