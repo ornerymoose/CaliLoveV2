@@ -18,6 +18,8 @@
 				<% if number_to_currency(@cart.total_price) == "$0.00" %>
 				<% else %>
 					<%= link_to 'Checkout', new_charge_path(id: @cart.id), {:class => "checkout"} %>
+					<br>
+					<%= link_to 'Continue Shopping', products_path, {:class => "checkout"} %>
 				<% end %>
 	 		</div>
     </div>
