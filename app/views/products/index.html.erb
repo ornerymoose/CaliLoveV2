@@ -7,17 +7,11 @@
 		<div class="push-index"></div>
 		<div class="products-container">
 			<% @products.each_with_index do |product, index| %>
-				<div class="product-item-<%= index %>">
-				<div class="product-details-<%= index %>">
-				<%= link_to "#{product.name}", product %>
-				<%= number_to_currency(product.price) %>
-	
-  			<%#= image_tag("product-item-<%= index %>
-
-				</div>
-				</div>
+					<%= link_to product, :class => "product-item-#{index}" do %>
+						<div class="text-element"><%= "#{product.name}" %> <%= number_to_currency(product.price) %></div>
+            <%= image_tag("") %>
+          <% end %>
 			<% end %>
-			
 		</div>
 	</div>
 	</body>

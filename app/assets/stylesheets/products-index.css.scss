@@ -19,14 +19,11 @@ html, body
   height: 45px;
 }
 
-/*.product-item-0, .product-item-1, .product-item-2, .product-item-3
+.text-element
 {
-  background-color: black;
-  height: 600px;
-  width: 630px;
-  display:inline-block;
-  text-align: center;
-}*/
+  display: none;
+  font-size: 30px;
+}
 
 .product-item-0, .product-item-1, .product-item-2, .product-item-3
 {
@@ -42,6 +39,8 @@ html, body
 {
   float: right;
   background-image:url('twill_hat.jpg');
+  display: inline-block;
+  background-position: center;
 }
 
 .product-item-2
@@ -65,19 +64,19 @@ html, body
   height: 1600px;
 }
 
- .product-details-0, .product-details-1, .product-details-2, .product-details-3
-{
-  display: none;
-}
-
-.product-item-0:hover .product-details-0, .product-item-1:hover .product-details-1, .product-item-2:hover .product-details-2, .product-item-3:hover .product-details-3 
+.product-item-0:hover .text-element, .product-item-1:hover .text-element, .product-item-2:hover .text-element, .product-item-3:hover .text-element
 {
   color: black;
   overflow: hidden;
   background-color: white;
-  opacity: 0.7;
+  opacity: 0.5;
   display: inline-block;
   height: 760px;
   width: 570px;
   line-height: 760px;
+}
+/* this is a pretty dirty fix, need to look into this. Initial problem: product-item 2 and 3 would shift down on product-item-0 hover */
+.product-item-0:hover .text-element
+{
+  margin-bottom: -25px;
 }
