@@ -214,30 +214,40 @@
   height: 300px;
 }
 
-#male-shirt
+.welcome-element
 {
-  background: url(Mens_BlackFront.jpg) no-repeat;
-  background-size:250px 300px;
-  width: 250px;
+  display: none;
+  font-size: 20px;
+}
+
+.welcome-item-0, .welcome-item-1
+{
+  background-image:url('Mens_BlackFront.jpg');
   height: 300px;
+  width: 250px;
+  text-align: center;
+  background-size: 250px 300px;
   float: left;
-  /*&:hover {
-    background-color: red;
-  }*/
 }
 
-#male-shirt:hover{
-    background-color: red;
-}
-
-#female-shirt
+.welcome-item-1
 {
-  background: url(Girls_BlackFront.jpg) no-repeat;
-  background-size:250px 300px;
-  width: 250px;
-  height: 300px;
+  background-image:url('Girls_BlackFront.jpg'); 
   float: right;
 }
+
+.welcome-item-0:hover .welcome-element, .welcome-item-1:hover .welcome-element
+{
+  color: black;
+  overflow: hidden;
+  background-color: white;
+  opacity: 0.5;
+  display: inline-block;
+  height: 300px;
+  width: 250px;
+  line-height: 300px;
+}
+
 /* SHOWCASE CONTENT - END */
 
 /* FOOTER LIST ITEMS - BEGIN */
