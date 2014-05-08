@@ -4,7 +4,9 @@
       <%= text_field_tag :search, params[:search], placeholder: 'Search', maxlength: 20, class: "search-input-header" %>
       <%#= submit_tag 'Search' %>
     <% end %>	
+    <div class="cart-total-icon"></div>
   	<div class="cart-total-partial"><%= render @cart %></div>
+
     <div class="header-items">
     <%= link_to 'ABOUT', 'pages/about', :class => 'header-item' %>
     <%= link_to 'SHOP', '/products', :class => 'header-item' %>
