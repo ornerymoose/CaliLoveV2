@@ -8,10 +8,11 @@
       <div class="product-container">
         <% @products.each_with_index do |product, index| %>
             <%= link_to product, :class => "welcome-item-#{index}" do %>
-              <div class="welcome-element"><%= "#{product.name}" %> <%= number_to_currency(product.price) %></div>
+              <div class="welcome-element"><%= product.name %> <%= number_to_currency(product.price) %></div>
               <%= image_tag("") %>
             <% end %>
         <% end %>
+
       </div>
   </body>
 </html>
