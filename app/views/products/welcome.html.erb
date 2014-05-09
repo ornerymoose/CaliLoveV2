@@ -6,13 +6,7 @@
       <div class="about-shop">Designed and Printed in California</div>
       <div class="filler-container">
       <div class="product-container">
-        <% @products.each_with_index do |product, index| %>
-            <%= link_to product, :class => "welcome-item-#{index}" do %>
-              <div class="welcome-element"><%= product.name %> <%= number_to_currency(product.price) %></div>
-              <%= image_tag("") %>
-            <% end %>
-        <% end %>
-
+        <%= @products %>
       </div>
   </body>
 </html>
