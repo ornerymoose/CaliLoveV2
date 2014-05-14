@@ -14,6 +14,7 @@ gem 'aws-sdk'
 gem 'cocaine'
 gem 'stripe'
 gem 'pry-rails'
+gem 'unicorn'
 
 group :development do
   gem 'sqlite3'
@@ -22,6 +23,7 @@ end
 group :production do
   gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
+  #gem 'unicorn'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
