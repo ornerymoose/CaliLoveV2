@@ -2,6 +2,22 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* testing */
+
+
+/*.adiv
+{
+  display:none;
+  width: 300px;
+  height: 300px;
+  background-color: red;
+  position: fixed;
+  top: 100px;
+  left: 100px;
+}*/
+
+
+/* testing end */
 /* custom fonts begin */
 @font-face {
   font-family: 'MyriadPro-Regular';
@@ -31,7 +47,7 @@
   border:1px solid #057fd0;
   display:inline-block;
   cursor:pointer;
-  color:#ffffff;
+  color:#ffffff !important;
   font-family:arial;
   font-size:15px;
   font-weight:bold;
