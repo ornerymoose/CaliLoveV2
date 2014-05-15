@@ -15,6 +15,7 @@ gem 'cocaine'
 gem 'stripe'
 gem 'pry-rails'
 gem 'unicorn'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'sqlite3'
